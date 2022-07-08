@@ -48,15 +48,17 @@ const RecordsPage = () => {
             <Thead>
               <Tr>
                 <Th>Competition</Th>
+                  <Th>Distance</Th>
                 <Th>Swim Time</Th>
                 <Th>Cycle Time</Th>
                 <Th>Run Time</Th>
               </Tr>
             </Thead>
             <Tbody>
-              {data ? data.map(({ competitionName, cycleTime, runTime, swimTime }) => (
+              {data ? data.map(({ competitionName, cycleTime, runTime, swimTime, selectedDistanceName }) => (
                 <Tr>
                   <Td>{competitionName}</Td>
+                    <Td>{selectedDistanceName}</Td>
                   <Td>{cycleTime}</Td>
                   <Td>{runTime}</Td>
                   <Td>{swimTime}</Td>

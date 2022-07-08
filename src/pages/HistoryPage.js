@@ -47,16 +47,19 @@ const HistoryPage = () => {
               <Tr>
                 <Th>Competitor</Th>
                 <Th>Competition</Th>
+                <Th>Distance</Th>
                 <Th>Swim Time</Th>
                 <Th>Cycle Time</Th>
                 <Th>Run Time</Th>
+
               </Tr>
             </Thead>
             <Tbody>
-              {data ? data.map(({ competitionName, competitorEmail, cycleTime, runTime, swimTime }) => (
+              {data ? data.map(({ competitionName, competitorEmail, cycleTime, runTime, swimTime, selectedDistanceName }) => (
                 <Tr>
                   <Td>{competitorEmail}</Td>
                   <Td>{competitionName}</Td>
+                    <Td>{selectedDistanceName}</Td>
                   <Td>{cycleTime}</Td>
                   <Td>{runTime}</Td>
                   <Td>{swimTime}</Td>
@@ -66,7 +69,7 @@ const HistoryPage = () => {
         </Table>
         </TableContainer>
       </VStack>
-    </Center>  
+    </Center>
   )
 }
 
